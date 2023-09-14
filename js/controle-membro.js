@@ -18,7 +18,7 @@ let formModal = {
     telefone: document.getElementById('telefone'),
     cpf: document.getElementById('cpf'),
     email: document.getElementById('email'),
-    // dataNasc: document.getElementById('dataNasc'),
+    dataNasc: document.getElementById('dataNasc'),
     // dataCadastro: document.getElementById('dataCadastro'),
 
 }
@@ -33,7 +33,7 @@ class Membro {
         this.email = obj.email;
         this.telefone = obj.telefone;
         this.sexo = obj.sexo;
-        // this.dataNasc = obj.dataNasc;
+        this.dataNasc = obj.dataNasc;
         // this.dataCadastro = obj.dataCadastro;
     
     }
@@ -85,7 +85,7 @@ function obterMembroDoModal(){
         telefone: formModal.telefone.value,
         cpfOuCnpj: formModal.cpf.value,
         email: formModal.email.value,
-        // dataNasc: formModal.dataNasc.value,
+        dataNasc: formModal.dataNasc.value,
         // dataCadastro: (formModal.dataCadastro.value)
         //                 ? new Date(formModal.dataCadastro.value).toISOString()
         //                 : new Date().toISOString()
@@ -131,7 +131,7 @@ function atualizarModalMembro(membro){
     formModal.cpf.value = membro.cpfOuCnpj;
     formModal.email.value = membro.email;
     formModal.telefone.value = membro.telefone;
-    // formModal.dataNasc.value = membro.dataNasc
+    formModal.dataNasc.value = membro.dataNasc
     // formModal.dataCadastro.value = membro.dataCadastro.substring(0,10);
 }
 
@@ -143,7 +143,7 @@ function limparModalMembro(){
     formModal.cpf.value = "";
     formModal.email.value = "";
     formModal.telefone.value = "";
-    // formModal.dataNasc.value = "";
+    formModal.dataNasc.value = "";
     // formModal.dataCadastro.value = "";
 }
 
@@ -177,13 +177,13 @@ function criarLinhaNaTabela(membro){
      tdTel.textContent = membro.telefone;
      tdCpf.textContent = membro.cpfOuCnpj;
      tdEmail.textContent = membro.email;
-     tdNasc.textContent = membro.datanasc;
+     tdNasc.textContent = membro.dataNasc;
     //  tddataCadastro.textContent = new date (membro.dataCadastro).toLocaleDatestring();
 
-     tdAcoes.innerHTML =  `<button onclick="editarMembro(${membro.id})" class="btn btn-primary btn-sm mr-3">
+     tdAcoes.innerHTML =  `<button onclick="editarMembro(${membro.id})" class="btn btn-dark btn-sm mr-3">
                                 Editar
                             </button>
-                            <button onclick="excluirMembro(${membro.id})" class="btn btn-outline-primary btn-sm mr-3">
+                            <button onclick="excluirMembro(${membro.id})" class="btn btn-outline-dark btn-sm mr-3">
                                 Excluir
                             </button>`;
 

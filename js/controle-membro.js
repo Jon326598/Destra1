@@ -14,7 +14,7 @@ let btnCancelar = document.getElementById('btn-cancelar');
 let formModal = {
     id: document.getElementById('id'),
     nome: document.getElementById('name'),
-    // sexo: document.getElementById('sexo'),
+    sexo: document.getElementById('sexo'),
     telefone: document.getElementById('telefone'),
     cpf: document.getElementById('cpf'),
     email: document.getElementById('email'),
@@ -32,7 +32,7 @@ class Membro {
         this.cpfOuCnpj = obj.cpfOuCnpj;
         this.email = obj.email;
         this.telefone = obj.telefone;
-        // this.sexo = obj.sexo;
+        this.sexo = obj.sexo;
         // this.dataNasc = obj.dataNasc;
         // this.dataCadastro = obj.dataCadastro;
     
@@ -81,7 +81,7 @@ function obterMembroDoModal(){
     return new Membro({
         id: formModal.id.value,
         nome: formModal.nome.value,
-        // sexo: formModal.sexo.value,
+        sexo: formModal.sexo.value,
         telefone: formModal.telefone.value,
         cpfOuCnpj: formModal.cpf.value,
         email: formModal.email.value,
@@ -127,6 +127,7 @@ function atualizarModalMembro(membro){
 
     formModal.id.value = membro.id;
     formModal.nome.value = membro.nome;
+    formModal.sexo.value = membro.sexo;
     formModal.cpf.value = membro.cpfOuCnpj;
     formModal.email.value = membro.email;
     formModal.telefone.value = membro.telefone;
@@ -138,6 +139,7 @@ function limparModalMembro(){
 
     formModal.id.value = "";
     formModal.nome.value = "";
+    formModal.sexo.value = "";
     formModal.cpf.value = "";
     formModal.email.value = "";
     formModal.telefone.value = "";
@@ -154,7 +156,6 @@ function excluirMembro(id){
     }
         
 }
-    // alert('Aqui vou excluir o membro ' + id);
 
 function criarLinhaNaTabela(membro){
 
@@ -163,7 +164,7 @@ function criarLinhaNaTabela(membro){
      // 2 criar TDs
      let tdId = document.createElement('td');
      let tdNome = document.createElement('td');
-    //  let tdSexo = document.createElement('td');
+     let tdSexo = document.createElement('td');
      let tdTel = document.createElement('td');
      let tdCpf = document.createElement('td');
      let tdEmail = document.createElement('td');
@@ -172,7 +173,7 @@ function criarLinhaNaTabela(membro){
      // 3 atualizar as informações das aTDs
      tdId.textContent = membro.id;
      tdNome.textContent = membro.nome;
-    //  tdSexo.textContent = membro.sexo;
+     tdSexo.textContent = membro.sexo;
      tdTel.textContent = membro.telefone;
      tdCpf.textContent = membro.cpfOuCnpj;
      tdEmail.textContent = membro.email;
@@ -189,7 +190,7 @@ function criarLinhaNaTabela(membro){
      // 4 adicionar as Tds dentro das linhas
      tr.appendChild(tdId);
      tr.appendChild(tdNome);
-    //  tr.appendChild(tdSexo);
+     tr.appendChild(tdSexo);
      tr.appendChild(tdTel);
      tr.appendChild(tdCpf);
      tr.appendChild(tdEmail);

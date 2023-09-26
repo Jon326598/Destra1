@@ -321,4 +321,14 @@ function obterToken() {
     return localStorage.getItem("token");
 }
 
+function sairSistema(){
+    // localStorage.removeItem("token");
+    // localStorage.removeItem("usuario");
+    direcionarTelaDeLogin();                                                                                                                                                                                                                                                            
+}
+
+function direcionarTelaDeLogin(){
+    window.open('login.html', '_self');
+}
+
 obterMembro();

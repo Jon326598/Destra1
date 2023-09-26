@@ -28,3 +28,8 @@ div.modal-dialog{
     display: none;
 }
 
+.navbar-brand{
+    margin-right: 1330px;
+    margin-left: 30px;
+}
+

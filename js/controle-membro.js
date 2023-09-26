@@ -46,16 +46,14 @@ btnAdicionar.addEventListener('click', () => {
 
 btnSalvar.addEventListener('click', () => {
 
-    // 1º capturar membro do modal
+    
     let membro = obterMembroDoModal();
-    // 2º se os campos obrigatórios foram preenchidos
     if (!membro.cpfOuCnpj || !membro.email) {
         alert('E-mail e CPF são obrigatórios.')
         return;
     }
     modalMembro.textContent = "";
 
-    // 3º novo cadastro de informações
     if (modoEdicao) {
         atualizarMembroBackend(membro);
     } else {
@@ -213,9 +211,6 @@ function popularTabela(response) {
 
     response.forEach(membro => {
         criarLinhaNaTabela(membro);
-
-
-
     });
 }
 
@@ -296,8 +291,6 @@ function excluirMembroBackend(membro) {
             atualizarMembroNaLista(membro, true);
             modalMembro.hide();
 
-            
-
         })
         .catch(error => {
             console.log(error)
@@ -323,8 +316,6 @@ function obterToken() {
 }
 
 function sairSistema(){
-    // localStorage.removeItem("token");
-    // localStorage.removeItem("usuario");
     direcionarTelaDeLogin();                                                                                                                                                                                                                                                            
 }
 

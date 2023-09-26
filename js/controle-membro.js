@@ -145,7 +145,8 @@ function excluirMembro(id) {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Sim, excluir!'
+        confirmButtonText: 'Sim, excluir!',
+        cancelButtonText: 'Cancelar'
     })
         .then((result) => {
             if (result.isConfirmed) {

@@ -6,46 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Membro</title>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"> -->
   <!-- Latest compiled and minified CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Latest compiled JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../CSS/base.css">
-
-  <!-- <link rel="stylesheet" href="./css/bootstrap.min.css">  -->
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <a class="navbar-brand" href="#">DESTRA</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <!-- <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="membresia.html">Membresia</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="ministerios.html">Ministérios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="grupos.html">Grupos</a>
-        </li>
-      </ul> -->
 
       <ul class="navbar-nav">
-        <li 
-        onclick="sairSistema()" 
-        class="nav-item">
-          <a 
-          class="nav-link" 
-          href="#"
-          >Sair</a>
+        <li onclick="sairSistema()" class="nav-item">
+          <a class="nav-link" href="#">Sair</a>
         </li>
       </ul>
 
@@ -123,7 +100,6 @@
               <div class="row">
                 <div class="col-sm-4">
                   <label for="sexo" class="form-label">Sexo M/F</label>
-                  <!-- <input type="text" class="form-control" id="sexo"> -->
                   <select class="form-select" id="sexo">
                     <option>Masculino</option>
                     <option>Feminino</option>
@@ -138,10 +114,6 @@
                   <label for="cpf" class="form-label">CPF</label>
                   <input type="text" class="form-control" id="cpf">
                 </div>
-                <!-- <div class="col-sm-3">
-                  <label for="datanasc" class="form-label">Data de nasc.</label>
-                  <input type="date" class="form-control" id="datanasc">
-                </div> -->
               </div>
               <div class="row">
                 <div class="col-sm-7">
@@ -165,6 +137,8 @@
       </div>
     </div>
   </div>
+  <script src="../js/login.js"></script>
+  <script src="../js/base.js"></script>
   <script src="../JS/controle-membro.js"></script>
 
 </body>

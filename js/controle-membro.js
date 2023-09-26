@@ -159,13 +159,6 @@ function excluirMembro(id) {
             }
         })
 
-
-
-    // if(confirm('Deseja realmente excluir o membro ' + membro.nome)){
-
-
-    // }
-
 }
 
 function criarLinhaNaTabela(membro) {
